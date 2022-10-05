@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table JS</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap");
+
+    /*font-family: 'Ubuntu', sans-serif;*/
+    :root {
+        --fs: 1rem;
+        --fm: 2rem;
+        --fl: 2.5rem;
+        --primary-color: #287bff;
+        --light-primary-color: rgb(40, 123, 255, 0.4);
+        --white: white;
+
+
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 62.5%;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+
+        margin: 2rem auto;
+        width: 80%;
+    }
+
+    .table-tittle {
+        color: var(--primary-color);
+    }
+
+    .input-search {
+        justify-self: end;
+
+        width: 50%;
+        margin: 1rem 0;
+        padding: 0.8rem 1rem;
+
+        font-size: 1.3rem;
+        outline: none;
+        border: 1px solid var(--light-primary-color);
+        border-radius: 1rem;
+
+    }
+
+    .input-search::placeholder {
+        margin-left: 1rem;
+        color: var(--light-primary-color);
+    }
+
+    .container .table-main {
+
+        width: 70vw;
+        box-shadow: 1px 1px 2px 2px var(--light-primary-color);
+        border-collapse: collapse;
+        border-radius: 1rem;
+        margin-top: 2rem;
+    }
+
+    .table-main tbody tr.head {
+        text-align: left;
+        margin: 0.5rem 1rem;
+
+
+        background-color: #287bff;
+        color: var(--white);
+        font-size: 1.5rem;
+    }
+
+    .table-main tbody tr.head th {
+        padding: 0.5rem;
+    }
+
+    .table-main tbody td {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+
+    }
+
+    .table-main tbody td.td-icon {
+        text-align: center;
+    }
+
+    .table-main tbody td ion-icon {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--primary-color);
+
+    }
+    .hiden{
+        display:none;
+    }
+</style>
+
+<body>
+    <div class="table-list-luas container">
+        <h2 class="table-tittle" id="table-tittle">TITULO DE LA TABLA</h2>
+
+        <input type="text" class="input-search" placeholder="Buscar...">
+        <table class="table-main" id="table-main">
+            <tbody>
+                <tr class="head">
+                    <th>Empresa</th>
+                    <th>Marca y modelo</th>
+                    <th>No. Serie</th>
+                    <th>Fecha de ingreso</th>
+                    <th>Observaciones</th>
+                    <th>Asignar O.S.</th>
+                </tr>
+                <tr class="renglon">
+                    <td class="hiden">CARATULAS Ludlum 375 DUAL 259069</td>
+                    <td class="nombre">CARATULAS </td>
+                    <td>Ludlum 375 DUAL</td>
+                    <td>259069</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="hiden">COLONIAS Tracerco 7364679</td>
+                    <td class="nombre">COLONIAS </td>
+                    <td>Tracerco </td>
+                    <td>7364679</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="hiden">MEMBIRLLOS Ecotest 20938389</td>
+                    <td class="nombre">MEMBIRLLOS </td>
+                    <td>Ecotest</td>
+                    <td>20938389</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="hiden">CARACTERES S.E. International 474777732</td>
+                    <td class="nombre">CARACTERES </td>
+                    <td>S.E. International</td>
+                    <td>474777732</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="hiden">COLEGADS S.E. International 70010101</td>
+                    <td class="nombre">COLEGADS </td>
+                    <td>SI Ingenieria</td>
+                    <td>70010101</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="nombre">SCHLUMBERGER OFFSHORE SERVICES (MÉXICO) N.V. </td>
+                    <td>Ludlum 375 DUAL</td>
+                    <td>259069</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+                <tr class="renglon">
+                    <td class="nombre">SCHLUMBERGER OFFSHORE SERVICES (MÉXICO) N.V. </td>
+                    <td>Ludlum 375 DUAL</td>
+                    <td>23234469</td>
+                    <td>25/06/2022</td>
+                    <td>Sin observaciones</td>
+                    <td class="td-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+        <div class="nuevo">
+
+        </div>
+
+    </div>
+
+    </div>
+    <script src="table.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
